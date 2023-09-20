@@ -162,3 +162,10 @@ img {
     border-style: solid;
     border-width: 2px;
 }
+/* Estilo CSS para as imagens do carrossel */
+.carousel-item img {
+    height: 400px; /* Defina a altura desejada para as imagens */
+    width: 100%; /* Defina a largura como 100% para manter a proporção */
+    object-fit: cover; /* Garante que a imagem mantenha a proporção original e preencha todo o espaço disponível */
+}
+
