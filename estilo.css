@@ -156,3 +156,9 @@ footer p {
 p {
     text-align: justify;
 }
+img {
+    border-radius: 5%;
+    border-color: green;
+    border-style: solid;
+    border-width: 2px;
+}
