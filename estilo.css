@@ -55,33 +55,35 @@ h3 {
 
 nav {
     background-color: #E70000; /* Vermelho */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .menu {
-    width: 1200px;
-    height: 50px;
+    max-width: 100%; /* Para se adaptar a qualquer plataforma */
     padding: 10px;
-    margin: auto;
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 nav ul {
     list-style-type: none;
     text-transform: uppercase;
+    text-align: center; /* Centraliza texto horizontalmente */
 }
 
 nav ul li {
-    float: left;
+    display: inline-block; /* Exibe os itens do menu em linha */
+    margin: 0 10px; /* Espaçamento entre os itens do menu */
 }
 
 nav ul li a {
     text-decoration: none;
     font-size: 20px;
-    width: 232px;
-    display: block;
-    text-align: center;
-    padding: 12px 4px 12px 4px;
     color: #006847;
 }
+
+
 
 nav ul li a:hover {
     background-color: #FFF;
