@@ -18,7 +18,6 @@ Nossa página da web é uma plataforma que permite aos usuários explorar e apre
 
 - **Página Inicial:** Uma introdução ao México com uma bela imagem de destaque e links para seções específicas do site.
 - **História:** Uma seção que detalha a história fascinante do México, com informações e fatos importantes.
-- **Cultura:** Explore a rica cultura mexicana, incluindo música, dança e festivais tradicionais.
 - **Gastronomia:** Uma seção dedicada à deliciosa comida mexicana, com receitas autênticas e informações sobre pratos típicos.
 - **Pontos Turísticos:** Descubra os lugares mais incríveis para visitar no México, com descrições e imagens deslumbrantes.
 - **Contato:** Um formulário de contato para os usuários que desejam obter mais informações ou fazer perguntas.
