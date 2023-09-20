@@ -17,12 +17,6 @@ header {
     margin: auto;
 }
 
-header img {
-    float: left;
-    border: 2px solid #FFF; /* Branco */
-    margin: 25px 40px;
-}
-
 header p {
     text-align: right;
     color: #FFF;
@@ -51,6 +45,14 @@ h3 {
     font-style: italic;
     font-weight: normal;
     margin: 15px 50px;
+}
+main p {
+    text-align: justify;
+    margin: 20px 50px;
+    color: green;
+    font-size: 25px;
+
+
 }
 /* Estilos para o menu de navegação */
 .navbar {
@@ -84,36 +86,54 @@ h3 {
     background-color: #C8102E; /* Cor de fundo ao passar o mouse */
 }
 
+/* Estilos para o footer */
 footer {
-    clear: both;
-    color: #FFF;
-    background-color: #006847; /* Verde */
-    padding: 35px 0 30px;
-    letter-spacing: 1px;
+    background-color: #C8102E; /* Cor de fundo do footer */
+    color: #006847; /* Cor do texto no footer */
+    padding: 35px 0; /* Espaçamento interno no topo e na parte inferior */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    height: 100%; /* Define a altura do footer como 100% */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px; /* Tamanho da fonte do texto */
+}
+footer a:hover {
+    color: green;
 }
 
 footer p {
-    text-align: center;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    font-size: 18px; /* Tamanho da fonte do texto */
+    font-family: Arial, Helvetica, sans-serif; /* Família de fontes */
 }
+
 
 /* Adicione uma classe para as imagens lado a lado */
 .imagem-lado-a-lado {
     width: 480px; /* Largura desejada */
     height: 380px; /* Altura desejada */
     margin-right: 10px; /* Margem à direita para separar as imagens */
+    border-radius: 5%;
+    border-color: green;
+    border-style: double;
+    border-width: 2px;
 }
 
 /* Outros estilos personalizados para o seu conteúdo, como margens e espaçamento */
 .container {
     padding: 20px;
-}
-
-h2 {
-    color: #C8102E;
-    text-align: center;
-    font-size: 30px;
 }
 
 p {
