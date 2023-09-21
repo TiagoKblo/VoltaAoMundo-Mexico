@@ -18,6 +18,7 @@ Nossa página da web é uma plataforma que permite aos usuários explorar e apre
 
 - **Página Inicial:** Uma introdução ao México com uma bela imagem de destaque e links para seções específicas do site.
 - **História:** Uma seção que detalha a história fascinante do México, com informações e fatos importantes.
+- **Cultura** Explore a rica herança artística, musical, festiva e tradicional do México, destacando sua influência na identidade cultural do país.
 - **Gastronomia:** Uma seção dedicada à deliciosa comida mexicana, com receitas autênticas e informações sobre pratos típicos.
 - **Pontos Turísticos:** Descubra os lugares mais incríveis para visitar no México, com descrições e imagens deslumbrantes.
 - **Contato:** Um formulário de contato para os usuários que desejam obter mais informações ou fazer perguntas.
@@ -32,4 +33,4 @@ Este projeto está licenciado sob a **Licença MIT** - consulte o arquivo [LICEN
 
 ## Agradecimentos
 
-Agradecemos ao professor **José Gonçalves Junior** por ministrar o curso **"Desenvolvimento de Software Multiplataforma"** na instituição **FATEC "Itapira"**. Agradecemos também a todos que contribuíram para este projeto e esperamos que esta página da web inspire você a explorar a beleza e a cultura do México.
+Agradecemos ao professor **José Gonçalves Junior** por ministrar o curso **"Desenvolvimento Web 3"** na instituição **FATEC "Itapira"**. Agradecemos também a todos que contribuíram para este projeto e esperamos que esta página da web inspire você a explorar a beleza e a cultura do México.
