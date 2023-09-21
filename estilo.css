@@ -80,6 +80,7 @@ main h2 {
 }
 
 .navbar-toggler-icon {
+    background-color: whitesmoke;
     color: green; /* Cor do ícone do botão de alternância */
 }
 
@@ -102,6 +103,8 @@ main h2 {
     color: green; /* Cor dos links ao passar o mouse */
     background-color: #C8102E; /* Cor de fundo ao passar o mouse */
 }
+
+
 
 /* Estilos para o footer */
 footer {
@@ -171,7 +174,7 @@ img {
 /* Estilo para o elemento de áudio */
 audio {
     width: 100%; /* Largura total */
-    max-width: 400px; /* Largura máxima (ajuste conforme necessário) */
+    max-width: 300px; /* Largura máxima (ajuste conforme necessário) */
     margin: 0 auto; /* Centralize horizontalmente */
     display: block; /* Transforme em bloco para centralização automática */
 }
@@ -179,9 +182,9 @@ audio {
 /* Estilo para os controles de áudio */
 audio::-webkit-media-controls-panel {
     background-color: green; /* Cor de fundo */
-    color: black; /* Cor do texto */
+    color: whitesmoke; /* Cor do texto */
     border-radius: 10px; /* Borda arredondada */
-    padding: 10px; /* Espaçamento interno */
+    padding: 5px; /* Espaçamento interno */
 }
 
 /* Estilo para os botões de controle de áudio */
@@ -190,10 +193,10 @@ audio::-webkit-media-controls-pause-button,
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-volume-slider {
     background-color: green; /* Cor de fundo dos botões */
-    color: #C8102E; /* Cor do ícone dos botões */
+    color: whitesmoke; /* Cor do ícone dos botões */
     border-radius: 50%; /* Borda circular para botões de controle */
-    width: 30px; /* Largura dos botões */
-    height: 30px; /* Altura dos botões */
+    width: 10px; /* Largura dos botões */
+    height: 10px; /* Altura dos botões */
 }
 
 /* Estilo para a barra de progresso de áudio */
@@ -203,13 +206,13 @@ audio::-webkit-media-controls-seek-back-button,
 audio::-webkit-media-controls-seek-forward-button,
 audio::-webkit-media-controls-timeline {
     background-color: green; /* Barra de progresso transparente */
-    color: black; /* Cor do texto da barra de progresso */
+    color: whitesmoke; /* Cor do texto da barra de progresso */
 }
 
 /* Estilo para a barra de progresso de áudio preenchida */
 audio::-webkit-media-controls-timeline {
-    background-color: rgba(246, 10, 10, 0.2); /* Cor de fundo da barra de progresso */
-    height: 5px; /* Altura da barra de progresso */
+    background-color: rgba(255, 0, 0, 0.2); /* Cor de fundo da barra de progresso */
+    height: 3px; /* Altura da barra de progresso */
     border-radius: 5px; /* Borda arredondada */
 }
 
