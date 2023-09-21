@@ -2,7 +2,7 @@
 
 **Volta ao Mundo: México**
 
-Este é um projeto desenvolvido como parte do P1 do curso **"Desenvolvimento de Software Multiplataforma"**, ministrado pelo professor **José Gonçalves Junior** na instituição **FATEC "Itapira"**. Neste projeto, exploramos a cultura e a beleza do México. Utilizamos tecnologias como **HTML**, **Bootstrap** e **CSS** para criar uma página da web interativa e informativa.
+Este é um projeto desenvolvido como parte do P1 do curso **"Desenvolvimento Web 3"**, ministrado pelo professor **José Gonçalves Junior** na instituição **FATEC "Itapira"**. Neste projeto, exploramos a cultura e a beleza do México. Utilizamos tecnologias como **HTML**, **Bootstrap** e **CSS** para criar uma página da web interativa e informativa.
 
 ## Visão Geral
 
