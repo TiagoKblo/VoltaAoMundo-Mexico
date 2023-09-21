@@ -168,4 +168,53 @@ img {
     width: 100%; /* Defina a largura como 100% para manter a proporção */
     object-fit: cover; /* Garante que a imagem mantenha a proporção original e preencha todo o espaço disponível */
 }
+/* Estilo para o elemento de áudio */
+audio {
+    width: 100%; /* Largura total */
+    max-width: 400px; /* Largura máxima (ajuste conforme necessário) */
+    margin: 0 auto; /* Centralize horizontalmente */
+    display: block; /* Transforme em bloco para centralização automática */
+}
+
+/* Estilo para os controles de áudio */
+audio::-webkit-media-controls-panel {
+    background-color: green; /* Cor de fundo */
+    color: black; /* Cor do texto */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Estilo para os botões de controle de áudio */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+    background-color: green; /* Cor de fundo dos botões */
+    color: #C8102E; /* Cor do ícone dos botões */
+    border-radius: 50%; /* Borda circular para botões de controle */
+    width: 30px; /* Largura dos botões */
+    height: 30px; /* Altura dos botões */
+}
+
+/* Estilo para a barra de progresso de áudio */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-timeline {
+    background-color: green; /* Barra de progresso transparente */
+    color: black; /* Cor do texto da barra de progresso */
+}
+
+/* Estilo para a barra de progresso de áudio preenchida */
+audio::-webkit-media-controls-timeline {
+    background-color: rgba(246, 10, 10, 0.2); /* Cor de fundo da barra de progresso */
+    height: 5px; /* Altura da barra de progresso */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+/* Estilo para a barra de progresso de áudio preenchida */
+audio::-webkit-media-controls-timeline-progress-bar {
+    background-color: #C8102E; /* Cor de preenchimento da barra de progresso */
+}
 
