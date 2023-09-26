@@ -8,37 +8,67 @@ body {
     font-size: 20px;
 }
 
-
-.topo {
-    width: 100%;
-    margin: auto;
+/* Estilo para a imagem de fundo */
+#backgroundImage {
+    background-image: url('imagens/angel-independencia-ciudad-mexico.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
 }
+
+#backgroundImage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Cor de fundo semitransparente em branco */
+    z-index: 2;
+}
+
+/* Estilo para o conteúdo */
+.container {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+    /* Adicione espaço ao redor do conteúdo para evitar que o sombreamento cubra o texto */
+}
+
 header h1 {
     text-align: center;
     color: green;
     margin: 0px 0px 0px 0px;
     font-size: 50px;
-    padding:0px 0px 120px 0px;
+    padding: 0px 0px 120px 0px;
     text-transform: uppercase;
 }
+
 header h3 {
     text-align: center;
     color: #FFF;
     margin: 0px 0px -40px 0px;
     font-size: 30px;
-    padding:50px 0px 0px 0px;
+    padding: 50px 0px 0px 0px;
     text-transform: uppercase;
 }
+
 header p {
     text-align: right;
     color: #FFF;
     font-style: italic;
     font-size: 14px;
-    margin:50px 50px 0px 0px;
+    margin: 50px 50px 0px 0px;
 }
 
-header h1, header h3, header p {
-    text-shadow: 4px 4px 4px rgb(0, 0, 0); /* Adiciona sombreamento em cinza */
+header h1,
+header h3,
+header p {
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    /* Adiciona sombreamento em cinza */
 }
 
 h1 {
@@ -57,12 +87,14 @@ h3 {
     font-weight: normal;
     margin: 15px 50px;
 }
+
 main p {
     text-align: justify;
     margin: 20px 50px;
     color: green;
     font-size: 25px;
 }
+
 main h2 {
     text-align: center;
     font-weight: bold;
@@ -71,62 +103,89 @@ main h2 {
     margin: 20px 50px;
     text-transform: uppercase;
 }
+
 /* Estilos para o menu de navegação */
 .navbar {
-    background-color: #C8102E; /* Cor de fundo do menu */
+    background-color: #C8102E;
+    /* Cor de fundo do menu */
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
 }
 
 .navbar-toggler-icon {
     background-color: whitesmoke;
-    color: green; /* Cor do ícone do botão de alternância */
-    border-color: whitesmoke; /* Cor da borda do botão de alternância */
-    border-radius: 5px; /* Raio das bordas do botão de alternância */
-    padding: 5px; /* Espaçamento interno do botão de alternância */
+    color: green;
+    /* Cor do ícone do botão de alternância */
+    border-color: whitesmoke;
+    /* Cor da borda do botão de alternância */
+    border-radius: 5px;
+    /* Raio das bordas do botão de alternância */
+    padding: 5px;
+    /* Espaçamento interno do botão de alternância */
 }
+
 /* Altere a cor do ícone do hamburguer quando ele está menor */
 .navbar-toggler-icon svg {
-    fill: green; /* Cor do ícone */
+    fill: green;
+    /* Cor do ícone */
 }
+
 /* Centralize o ícone do hamburguer vertical e horizontalmente */
 .navbar-toggler-icon {
     display: flex;
-    justify-content: center; /* Centralize horizontalmente */
-    align-items: center; /* Centralize verticalmente */
+    justify-content: center;
+    /* Centralize horizontalmente */
+    align-items: center;
+    /* Centralize verticalmente */
 }
 
 .navbar-nav {
-    text-align: center; /* Alinhar o menu horizontalmente */
+    text-align: center;
+    /* Alinhar o menu horizontalmente */
 }
 
 .nav-item {
-    margin: 0 10px; /* Espaçamento entre os itens do menu */
+    margin: 0 10px;
+    /* Espaçamento entre os itens do menu */
 }
 
 .nav-link {
-    color: #FFF; /* Cor dos links do menu */
-    font-size: 20px; /* Tamanho da fonte dos links */
-    text-transform: uppercase; /* Transformar texto em maiúsculas */
-    transition: color 0.3s; /* Transição suave da cor do texto */
+    color: #FFF;
+    /* Cor dos links do menu */
+    font-size: 20px;
+    /* Tamanho da fonte dos links */
+    text-transform: uppercase;
+    /* Transformar texto em maiúsculas */
+    transition: color 0.3s;
+    /* Transição suave da cor do texto */
 }
 
 .nav-link:hover {
-    color: green; /* Cor dos links ao passar o mouse */
-    background-color: #C8102E; /* Cor de fundo ao passar o mouse */
+    color: green;
+    /* Cor dos links ao passar o mouse */
+    background-color: #C8102E;
+    /* Cor de fundo ao passar o mouse */
 }
 
 
 
 /* Estilos para o footer */
 footer {
-    background-color: #C8102E; /* Cor de fundo do footer */
-    color: #006847; /* Cor do texto no footer */
-    padding: 35px 0; /* Espaçamento interno no topo e na parte inferior */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-    text-align: center; /* Centraliza o texto horizontalmente */
-    height: 100%; /* Define a altura do footer como 100% */
+    background-color: #C8102E;
+    /* Cor de fundo do footer */
+    color: #006847;
+    /* Cor do texto no footer */
+    padding: 35px 0;
+    /* Espaçamento interno no topo e na parte inferior */
+    letter-spacing: 1px;
+    /* Espaçamento entre letras */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    height: 100%;
+    /* Define a altura do footer como 100% */
 }
 
 .container {
@@ -135,69 +194,103 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding: 20px;
 }
 
 footer a {
     color: whitesmoke;
     text-decoration: none;
-    font-size: 18px; /* Tamanho da fonte do texto */
+    font-size: 18px;
+    /* Tamanho da fonte do texto */
 }
+
 footer a:hover {
     color: green;
 }
 
 footer p {
     color: whitesmoke;
-    font-size: 18px; /* Tamanho da fonte do texto */
-    font-family: Arial, Helvetica, sans-serif; /* Família de fontes */
-}
-
-
-/* Adicione uma classe para as imagens lado a lado */
-.imagem-lado-a-lado {
-    width: 480px; /* Largura desejada */
-    height: 380px; /* Altura desejada */
-    margin-right: 10px; /* Margem à direita para separar as imagens */
-    border-radius: 5%;
-    border-color: green;
-    border-style: solid;
-    border-width: 2px;
-}
-
-/* Outros estilos personalizados para o seu conteúdo, como margens e espaçamento */
-.container {
-    padding: 20px;
+    font-size: 18px;
+    /* Tamanho da fonte do texto */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Família de fontes */
 }
 
 p {
     text-align: justify;
 }
+
+/* Estilo CSS para a imagem com efeito de sombra 3D verde */
 img {
     border-radius: 5%;
-    border-color: green;
-    border-style: solid;
-    border-width: 2px;
+    border-style: transparent;
+    border-width: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 128, 0, 0.5);
+    /* Sombras verdes */
 }
+
 /* Estilo CSS para as imagens do carrossel */
-.carousel-item img {
-    height: 400px; /* Defina a altura desejada para as imagens */
-    width: 100%; /* Defina a largura como 100% para manter a proporção */
-    object-fit: cover; /* Garante que a imagem mantenha a proporção original e preencha todo o espaço disponível */
+.carousel-inner img {
+    height: 400px;
+    /* Defina a altura fixa desejada para as imagens */
+    width: 100%;
+    /* Defina a largura como 100% para manter a proporção */
+    object-fit: cover;
+    /* Garante que a imagem mantenha a proporção original e preencha todo o espaço disponível */
 }
+
+
+/* Estilo CSS para o vídeo com efeito de sombra 3D verde */
+.video-container {
+    box-shadow: 5px 5px 10px rgba(0, 128, 0, 0.5);
+    /* Sombras verdes */
+    border-radius: 5px;
+    overflow: hidden;
+    /* Para ocultar margens e preenchimentos do iframe */
+}
+
+/* Estilo CSS para o vídeo incorporado */
+.embed-responsive-16by9 {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Proporção de 16:9 */
+    height: 0;
+}
+
+.embed-responsive-16by9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* Remover margens */
+    padding: 0;
+    /* Remover preenchimentos */
+}
+
 /* Estilo para o elemento de áudio */
 audio {
-    width: 100%; /* Largura total */
-    max-width: 400px; /* Largura máxima (ajuste conforme necessário) */
-    margin: 0 auto; /* Centralize horizontalmente */
-    display: block; /* Transforme em bloco para centralização automática */
+    width: 100%;
+    /* Largura total */
+    max-width: 400px;
+    /* Largura máxima (ajuste conforme necessário) */
+    margin: 0 auto;
+    /* Centralize horizontalmente */
+    display: block;
+    /* Transforme em bloco para centralização automática */
 }
 
 /* Estilo para os controles de áudio */
 audio::-webkit-media-controls-panel {
-    background-color: green; /* Cor de fundo */
-    color: #FFF; /* Cor do texto */
-    border-radius: 10px; /* Borda arredondada */
-    padding: 10px; /* Espaçamento interno */
+    background-color: green;
+    /* Cor de fundo */
+    color: #FFF;
+    /* Cor do texto */
+    border-radius: 10px;
+    /* Borda arredondada */
+    padding: 10px;
+    /* Espaçamento interno */
 }
 
 /* Estilo para os botões de controle de áudio */
@@ -205,11 +298,16 @@ audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-pause-button,
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-volume-slider {
-    background-color: #FFF; /* Cor de fundo dos botões */
-    color: #C8102E; /* Cor do ícone dos botões */
-    border-radius: 50%; /* Borda circular para botões de controle */
-    width: 30px; /* Largura dos botões */
-    height: 30px; /* Altura dos botões */
+    background-color: #FFF;
+    /* Cor de fundo dos botões */
+    color: #C8102E;
+    /* Cor do ícone dos botões */
+    border-radius: 50%;
+    /* Borda circular para botões de controle */
+    width: 30px;
+    /* Largura dos botões */
+    height: 30px;
+    /* Altura dos botões */
 }
 
 /* Estilo para a barra de progresso de áudio */
@@ -218,78 +316,120 @@ audio::-webkit-media-controls-time-remaining-display,
 audio::-webkit-media-controls-seek-back-button,
 audio::-webkit-media-controls-seek-forward-button,
 audio::-webkit-media-controls-timeline {
-    background-color: transparent; /* Barra de progresso transparente */
-    color: #FFF; /* Cor do texto da barra de progresso */
+    background-color: transparent;
+    /* Barra de progresso transparente */
+    color: #FFF;
+    /* Cor do texto da barra de progresso */
 }
 
 /* Estilo para a barra de progresso de áudio preenchida */
 audio::-webkit-media-controls-timeline {
-    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo da barra de progresso */
-    height: 5px; /* Altura da barra de progresso */
-    border-radius: 5px; /* Borda arredondada */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Cor de fundo da barra de progresso */
+    height: 5px;
+    /* Altura da barra de progresso */
+    border-radius: 5px;
+    /* Borda arredondada */
 }
 
 /* Estilo para a barra de progresso de áudio preenchida */
 audio::-webkit-media-controls-timeline-progress-bar {
-    background-color: #C8102E; /* Cor de preenchimento da barra de progresso */
+    background-color: #C8102E;
+    /* Cor de preenchimento da barra de progresso */
 }
+
 /* Estilo para a tabela */
 .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #fa0000;
-    border-collapse: collapse;
-    border-spacing: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo semi-transparente para facilitar a leitura */
+    border-radius: 10px;
+    /* Adiciona bordas arredondadas */
+    overflow: hidden;
+    /* Para esconder as bordas arredondadas quando a tabela é estreita */
 }
 
 /* Estilo para os cabeçalhos da tabela */
 .table th {
-    background-color: #f8f9fa;
+    background-color: #C8102E;
+    /* Cor de fundo do cabeçalho */
+    color: white;
+    /* Cor do texto do cabeçalho */
     text-align: left;
     font-weight: bold;
+    padding: 10px;
+    /* Espaçamento interno do cabeçalho */
 }
 
 /* Estilo para as células da tabela */
 .table td {
-    padding: 0.75rem;
+    padding: 10px;
+    /* Espaçamento interno das células */
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
 
 /* Estilo para as linhas pares da tabela */
 .table tbody tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Fundo semi-transparente para linhas pares */
 }
 
 /* Estilo para realçar a primeira coluna (rótulos) */
 .table tbody th {
-    background-color: #e1ffe6;
+    background-color: #C8102E;
+    /* Cor de fundo do rótulo */
+    color: white;
+    /* Cor do texto do rótulo */
 }
+
+/* Estilo para a tabela responsiva em telas pequenas */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+    }
+
+    .table thead {
+        display: none;
+        /* Esconde o cabeçalho da tabela em telas pequenas */
+    }
+
+    .table tbody td {
+        display: block;
+        text-align: left;
+    }
+}
+
 
 /* Estilo para a tabela responsiva em telas menores */
 @media (max-width: 575.98px) {
     .table {
         display: block;
     }
+
     .table thead {
         display: none;
     }
+
     .table tbody {
         display: block;
     }
+
     .table tbody tr {
         margin-bottom: 0.625rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
+
     .table tbody td {
         margin-top: 0.625rem;
         margin-right: 0;
     }
+
     .table tbody th {
         margin-top: 0.625rem;
         margin-right: 0;
     }
 }
-
