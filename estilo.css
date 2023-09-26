@@ -8,12 +8,13 @@ body {
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 20px;
 }
-/* Estilo para a imagem de fundo */
+
+/* Estilo para o background do elemento #backgroundImage */
 #backgroundImage {
     background-image: url('imagens/angel-independencia-ciudad-mexico.webp');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y; /* Repete verticalmente */
     position: relative;
     z-index: 1;
 }
@@ -35,7 +36,7 @@ body {
     position: relative;
     z-index: 3;
     padding: 20px;
-    /* Adicione espaço ao redor do conteúdo para evitar que o sombreamento cubra o texto */
+    /* Adiciona espaço ao redor do conteúdo para evitar que o sombreamento cubra o texto */
 }
 
 header h1 {
@@ -67,7 +68,7 @@ header p {
 header h1,
 header h3,
 header p {
-    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    text-shadow: 4px 4px 8px rgb(0, 0, 0, 1);
     /* Adiciona sombreamento em cinza */
 }
 
