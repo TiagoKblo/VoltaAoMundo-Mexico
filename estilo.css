@@ -82,6 +82,19 @@ main h2 {
 .navbar-toggler-icon {
     background-color: whitesmoke;
     color: green; /* Cor do ícone do botão de alternância */
+    border-color: whitesmoke; /* Cor da borda do botão de alternância */
+    border-radius: 5px; /* Raio das bordas do botão de alternância */
+    padding: 5px; /* Espaçamento interno do botão de alternância */
+}
+/* Altere a cor do ícone do hamburguer quando ele está menor */
+.navbar-toggler-icon svg {
+    fill: green; /* Cor do ícone */
+}
+/* Centralize o ícone do hamburguer vertical e horizontalmente */
+.navbar-toggler-icon {
+    display: flex;
+    justify-content: center; /* Centralize horizontalmente */
+    align-items: center; /* Centralize verticalmente */
 }
 
 .navbar-nav {
