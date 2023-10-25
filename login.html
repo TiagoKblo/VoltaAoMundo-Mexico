@@ -54,42 +54,32 @@
             </div>
         </div>
     </nav>
-    <main class="bg-light">
+    <main id="login-main" class="bg-light">
         <div class="container">
-            <h2 class="text-center">Entre em Contato</h2>
-            <div class="row">
-    <div class="col-md-6">
-        <form action="contato.php" method="POST">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Seu email">
-            </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem:</label>
-                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Enviar</button>
-        </form>
-    </div>
-
-                <div class="col-md-6">
-                    <p>
-                        Tem alguma dúvida ou comentário? Ficaremos felizes em ouvir de você. Preencha o formulário à
-                        esquerda ou entre em contato conosco através das informações abaixo:
-                    </p>
-                    <ul class="list-unstyled">
-                        <li><strong>Email:</strong> contato@voltamundo.com</li>
-                        <li><strong>Telefone:</strong> (11) 1234-5678</li>
-                        <li><strong>Endereço:</strong> Rua das Américas, 123 - Cidade, País</li>
-                    </ul>
+            <div class="row justify-content-center align-items-center" style="height: 100vh;">
+                <div class="col-md-12">
+                    <h2 class="text-center">Entrar</h2>
+                    <!-- Formulário de login -->
+                    <form action="login.php" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome de Usuário:</label>
+                            <input type="text" class="form-control" id="nome" name="nome_usuario" placeholder="Seu nome de usuário">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha:</label>
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Sua senha">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                         <!-- Botão "Cadastrar-se" -->
+                    <div class="text-center">
+                        <a href="cadastro.html" class="btn btn-primary">Cadastrar-se</a>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </main>
+
 
     <footer class="text-center">
         <div class="container">
@@ -109,3 +99,4 @@
 </body>
 
 </html>
+

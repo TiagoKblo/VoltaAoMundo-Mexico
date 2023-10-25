@@ -1,19 +1,25 @@
+<?php
+require 'classes/Usuario.php';
+$usuario = new Usuario($conexao);
+
+// Verifique se o usuário está logado
+
+$mensagens = $usuario->buscarMensagens();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kblo">
     <meta name="keywords" content="méxico">
-    <meta name="description" content="Entre em contato conosco">
+    <meta name="description" content="Cadastro - Volta ao Mundo">
     <link rel="icon" href="imagens/icon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo.css">
-    <title>Contato - Volta ao Mundo</title>
+    <title> Mensagens de Contato - Volta ao Mundo</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #C8102E;">
         <div class="container">
@@ -54,42 +60,50 @@
             </div>
         </div>
     </nav>
-    <main class="bg-light">
-        <div class="container">
-            <h2 class="text-center">Entre em Contato</h2>
-            <div class="row">
-    <div class="col-md-6">
-        <form action="contato.php" method="POST">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Seu email">
-            </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem:</label>
-                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Enviar</button>
-        </form>
-    </div>
-
-                <div class="col-md-6">
-                    <p>
-                        Tem alguma dúvida ou comentário? Ficaremos felizes em ouvir de você. Preencha o formulário à
-                        esquerda ou entre em contato conosco através das informações abaixo:
-                    </p>
-                    <ul class="list-unstyled">
-                        <li><strong>Email:</strong> contato@voltamundo.com</li>
-                        <li><strong>Telefone:</strong> (11) 1234-5678</li>
-                        <li><strong>Endereço:</strong> Rua das Américas, 123 - Cidade, País</li>
-                    </ul>
+    <main class="painel-mensagens bg-light">
+    <div class="container">
+        <h2 class="text-center mt-4">Mensagens de Contato</h2>
+        <div class="mt-4" id="mensagens-container">
+        <main class="painel-mensagens bg-light">
+            <?php
+            // Loop através das mensagens
+            foreach ($mensagens as $mensagem) {
+                $respondidaClass = ($mensagem['respondida'] == 1) ? 'respondida' : '';
+            ?>
+            <div class="mensagem <?php echo $respondidaClass; ?>">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Remetente: <?= $mensagem['nome'] ?></h4>
+                        <h5>E-mail: <?= $mensagem['email'] ?></h5>
+                        <p>Data: <?= $mensagem['data_envio'] ?></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Mensagem: <?= $mensagem['mensagem'] ?></p>
+                    </div>
                 </div>
+
+                <form method="POST" action="processar_resposta.php">
+                    <input type="hidden" name="id_mensagem" value="<?= $mensagem['id'] ?>">
+                    <input type="hidden" name="email_destinatario" value="<?= $mensagem['email'] ?>">
+                    <div class="form-group">
+                        <textarea name="resposta" rows="3" class="form-control" placeholder="Sua resposta"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Responder</button>
+                </form>
+
+                <!-- Botão para marcar como respondida -->
+                <?php if ($mensagem['respondida'] == 1) { ?>
+                    <button class="btn btn-secondary respondida">Respondida</button>
+                <?php } else { ?>
+                    <a href="marcar_respondida.php?id=<?= $mensagem['id'] ?>" class="btn btn-success">Marcar como Respondida</a>
+                <?php } ?>
             </div>
+            <?php
+            }
+            ?>
         </div>
-    </main>
+    </div>
+</main>
 
     <footer class="text-center">
         <div class="container">
@@ -107,5 +121,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
