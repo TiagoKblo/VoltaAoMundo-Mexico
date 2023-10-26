@@ -447,7 +447,7 @@ audio::-webkit-media-controls-timeline-progress-bar {
 
 /* Estilize o título do main com o ID "login-main" */
 #login-main h2 {
-    font-size: 24px; /* Tamanho da fonte */
+    font-size: 34px; /* Tamanho da fonte */
     margin-bottom: 20px; /* Espaçamento inferior */
 }
 
@@ -457,7 +457,7 @@ audio::-webkit-media-controls-timeline-progress-bar {
     align-items: center;
     justify-content: center;
     height: auto; /* Toda a altura da viewport */
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3); /* Sombra 3D */
+
 }
 
 /* Estilize a caixa de login com borda 3D */
@@ -468,37 +468,83 @@ audio::-webkit-media-controls-timeline-progress-bar {
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3); /* Sombra 3D */
 }
 
+/* Estilize o main com o ID "cadastro-main" */
+#cadastro-main {
+    background-color: #fff; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3); /* Sombra 3D */
+}
 
-/* Estilos para a seção principal do painel de mensagens */
+/* Estilize o título do main com o ID "cadastro-main" */
+#cadastro-main h2 {
+    font-size: 34px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Centralize o main verticalmente */
+#cadastro-main .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Toda a altura da viewport */
+
+}
+
+/* Estilize a caixa de cadastro com borda 3D */
+#cadastro-main form {
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3); /* Sombra 3D */
+}
+
+/* Estilo para a seção de mensagens de contato */
 .painel-mensagens {
     background-color: #f0f0f0;
     padding: 20px;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3); /* Sombra 3D */
 }
 
-/* Estilos para as mensagens individuais */
+/* Estilo para o título */
+.painel-mensagens h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 34px;
+    color: #C8102E;
+}
+
+/* Estilo para as mensagens individuais */
 .mensagem {
     background-color: #fff;
     border: 1px solid #ccc;
+    border-radius: 2%;
     margin-bottom: 20px;
     padding: 20px;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3); /* Sombra 3D */
 }
 
-/* Estilos para mensagens respondidas */
+/* Estilo para mensagens respondidas */
 .mensagem.respondida {
-    background-color: #e0e0e0; /* Cor de fundo diferente para mensagens respondidas */
+    background-color: #d0cdcd; /* Cor de fundo diferente para mensagens respondidas */
+}
+.mensagem.respondida button {
+    pointer-events: none; /* Desabilita a interação do cursor */
+    opacity: 0.5; /* Reduz a opacidade para indicar desativação */
+    cursor: not-allowed; /* Muda o cursor para "não permitido" */
 }
 
-.mensagem h4,
-.mensagem h5 {
+.mensagem h4, .mensagem h5 {
     margin: 0;
     padding: 0;
 }
 
 .mensagem h4 {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #C8102E;
+    color: green;
 }
 
 .mensagem h5 {
@@ -506,14 +552,18 @@ audio::-webkit-media-controls-timeline-progress-bar {
     color: #666;
 }
 
+/* Remova a formatação anterior e defina o estilo em negrito */
 .mensagem p {
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 10px;
     line-height: 1.6;
-    color: #C8102E;
+    color: #000000;
+    font-weight: bold; /* Aplicar estilo em negrito */
+    text-decoration: none; /* Remover sublinhado, se houver */
 }
 
-/* Estilos para o formulário de resposta */
+
+/* Estilo para o formulário de resposta */
 form {
     margin-top: 20px;
 }
@@ -530,7 +580,7 @@ form button {
     margin-top: 10px;
 }
 
-/* Estilos para botões */
+/* Estilo para botões */
 .btn {
     padding: 10px 20px;
     text-align: center;
@@ -542,13 +592,23 @@ form button {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #088408;
     color: #fff;
     border: none;
 }
 
 .btn-success {
-    background-color: #28a745;
+    background-color: #C8102E;
+    color: #fff;
+    border: none;
+}
+.btn-success:hover {
+    background-color: #9c0f24;
     color: #fff;
     border: none;
 }
@@ -558,3 +618,4 @@ form button {
     color: #fff;
     border: none;
 }
+
