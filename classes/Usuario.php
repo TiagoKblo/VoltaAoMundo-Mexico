@@ -8,7 +8,7 @@ class Usuario {
         $this->conexao = $conexao;
     }
     public function buscarMensagens() {
-        $sql = "SELECT id, nome, email, mensagem, data_envio, respondida FROM mensagens";
+        $sql = "SELECT id, nome, email, mensagem, data_envio, respondida, resposta FROM mensagens";
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

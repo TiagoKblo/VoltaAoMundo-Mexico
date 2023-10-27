@@ -524,6 +524,13 @@ audio::-webkit-media-controls-timeline-progress-bar {
     padding: 20px;
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3); /* Sombra 3D */
 }
+/* Estilo para o textarea respondido */
+textarea[readonly] {
+    background-color: #f0f0f0; /* Cor de fundo cinza */
+    border: 1px solid #ccc; /* Borda cinza */
+    color: #333; /* Cor do texto mais escura */
+    pointer-events: none; /* Impede eventos de mouse */
+}
 
 /* Estilo para mensagens respondidas */
 .mensagem.respondida {
@@ -559,7 +566,7 @@ audio::-webkit-media-controls-timeline-progress-bar {
     line-height: 1.6;
     color: #000000;
     font-weight: bold; /* Aplicar estilo em negrito */
-    text-decoration: none; /* Remover sublinhado, se houver */
+    
 }
 
 

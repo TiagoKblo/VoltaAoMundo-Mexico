@@ -1,10 +1,8 @@
 <?php
-require 'classes/Usuario.php';
+require 'verificar_autenticacao.php';
 $usuario = new Usuario($conexao);
-
-// Verifique se o usuário está logado
-
 $mensagens = $usuario->buscarMensagens();
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -52,9 +50,10 @@ $mensagens = $usuario->buscarMensagens();
                     <li class="nav-item active">
                         <a class="nav-link" href="contato.html">Contato</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="login.html">Login</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Sair</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -85,14 +84,25 @@ $mensagens = $usuario->buscarMensagens();
                             <input type="hidden" name="id_mensagem" value="<?= $mensagem['id'] ?>">
                             <input type="hidden" name="email_destinatario" value="<?= $mensagem['email'] ?>">
                             <div class="form-group">
-    <textarea name="resposta" rows="3" class="form-control" placeholder="Sua resposta">
-        <?php
-        if ($mensagem['respondida'] == 1) {
-            echo isset($mensagem['resposta']) ? $mensagem['resposta'] : '';
-        }
-        ?>
-    </textarea>
-</div>
+                                <?php
+                                if ($mensagem['respondida'] == 1) {
+                                    $readonly = 'readonly';
+                                } else {
+                                    $readonly = '';
+                                }
+                                ?>
+
+                                <textarea name="resposta" rows="3" class="form-control" placeholder="Sua resposta" <?= $readonly ?>>
+<?php
+                    if ($mensagem['respondida'] == 1 && $mensagem['resposta'] !== null) {
+                        echo $mensagem['resposta'];
+                    }
+?>
+</textarea>
+
+
+
+                            </div>
 
 
                             <button type="submit" class="btn btn-primary btn-block">Responder</button>
