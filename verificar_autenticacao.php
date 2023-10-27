@@ -3,8 +3,8 @@ session_start(); // Inicie a sessão
 
 require 'classes/Usuario.php';
 
-// Verifique se o usuário está logado
-if (!isset($_SESSION['usuario_autenticado'])) {
+// Verifique se o usuário está logado e o nome do usuário está definido
+if (!isset($_SESSION['usuario_autenticado']) || !isset($_SESSION['nome_usuario'])) {
     header("Location: login.html");
     exit;
 }
@@ -20,4 +20,5 @@ if (isset($_SESSION['ultima_atividade']) && time() - $_SESSION['ultima_atividade
 
 // Atualize o tempo da última atividade
 $_SESSION['ultima_atividade'] = time();
+
 ?>

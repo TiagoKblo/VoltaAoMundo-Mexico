@@ -17,6 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$nome, $email, $mensagem]);
 
         echo 'Mensagem enviada com sucesso. Entraremos em contato em breve.';
+        //Direcionar para a página anterior
+        echo '<a href="index.html">Voltar</a>';
+
     } catch (PDOException $e) {
         echo 'Erro no envio da mensagem: ' . $e->getMessage();
     }

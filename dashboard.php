@@ -62,6 +62,7 @@ $mensagens = $usuario->buscarMensagens();
         <div class="container">
             <h2 class="text-center mt-4">Mensagens de Contato</h2>
             <div class="mt-4" id="mensagens-container">
+                <p>Bem-vindo, <?php echo isset($_SESSION['nome_usuario']) ? $_SESSION['nome_usuario'] : 'Usuário Desconhecido'; ?>!</p>
 
                 <?php
                 // Loop através das mensagens
@@ -70,14 +71,17 @@ $mensagens = $usuario->buscarMensagens();
                 ?>
                     <div class="mensagem <?php echo $respondidaClass; ?>">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <h4>Remetente: <?= $mensagem['nome'] ?></h4>
                                 <h5>E-mail: <?= $mensagem['email'] ?></h5>
                                 <h5>Data: <?= $mensagem['data_envio'] ?></h5>
+                                <h4>Mensagem:</h4>
+
+                                <div class="mensagem-container">
+                                    <h5><?= $mensagem['mensagem'] ?></h5>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <p>Mensagem: <?= $mensagem['mensagem'] ?></p>
-                            </div>
+
                         </div>
 
                         <form method="POST" action="processar_resposta.php">
@@ -93,12 +97,10 @@ $mensagens = $usuario->buscarMensagens();
                                 ?>
 
                                 <textarea name="resposta" rows="3" class="form-control" placeholder="Sua resposta" <?= $readonly ?>>
-<?php
-                    if ($mensagem['respondida'] == 1 && $mensagem['resposta'] !== null) {
-                        echo $mensagem['resposta'];
-                    }
-?>
+<?php echo $mensagem['resposta']; ?>
 </textarea>
+
+
 
 
 
@@ -113,12 +115,15 @@ $mensagens = $usuario->buscarMensagens();
                             <button class="btn btn-secondary respondida btn-block">Respondida</button>
                         <?php } else { ?>
                             <a href="marcar_respondida.php?id=<?= $mensagem['id'] ?>" class="btn btn-success btn-block">Marcar como Respondida</a>
+                            <!-- Botão para excluir mensagem -->
+                            <a href="excluir_mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-danger btn-block">Excluir</a>
                         <?php } ?>
                     </div>
                 <?php
                 }
                 ?>
             </div>
+            <a href="excluir_mensagens_respondidas.php" class="btn btn-3d">Excluir Mensagens Respondidas</a>
         </div>
     </main>
 

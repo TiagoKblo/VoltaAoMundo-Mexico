@@ -20,6 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Defina a variável de sessão 'usuario_autenticado' como verdadeira
         $_SESSION['usuario_autenticado'] = true;
 
+        // Defina a variável de sessão 'nome_usuario' como o nome do usuário
+        $_SESSION['nome_usuario'] = $dadosUsuario['nome'];
+
         // Defina o tempo da última atividade
         $_SESSION['ultima_atividade'] = time();
 
