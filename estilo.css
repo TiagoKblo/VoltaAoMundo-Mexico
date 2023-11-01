@@ -644,3 +644,12 @@ form button {
     transform: scale(1.35); /* Efeito de zoom no hover */
 }
 
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
