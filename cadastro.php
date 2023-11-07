@@ -19,11 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$nomeUsuario, $hashSenha]);
 
         echo 'Cadastro realizado com sucesso. Você pode fazer login agora.';
-        //Direcionar para a página de login
-        header("Location: login.html");
-    
+    // Utilizando JavaScript para redirecionar após 5 segundos
+    echo '<script>
+        setTimeout(function() {
+            window.location.href = "login.html";
+        }, 5000); // 5000 milissegundos = 5 segundos
+    </script>';
     } catch (PDOException $e) {
         echo 'Erro de cadastro: ' . $e->getMessage();
     }
 }
-?>
