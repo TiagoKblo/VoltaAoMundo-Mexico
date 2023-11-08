@@ -3,6 +3,7 @@ require 'verificar_autenticacao.php';
 $usuario = new Usuario($conexao);
 $mensagens = $usuario->buscarMensagens();
 
+include 'contador_mensagens.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -60,9 +61,9 @@ $mensagens = $usuario->buscarMensagens();
     </nav>
     <main class="painel-mensagens">
         <div class="container">
-            <h2 class="text-center mt-4">Mensagens de Contato</h2>
+            <h2 class="text-center mt-4">Caixa de Mensagens</h2>
             <div class="mt-4" id="mensagens-container">
-                <p>Bem-vindo, <?php echo isset($_SESSION['nome_usuario']) ? $_SESSION['nome_usuario'] : 'Usuário Desconhecido'; ?>!</p>
+                <p>Bem-vindo, <?php echo isset($_SESSION['nome_usuario']) ? $_SESSION['nome_usuario'] : 'Usuário Desconhecido'; ?>! Voce possui: <?php echo $mensagensTotal; ?> Mensagens!</p>
 
                 <?php
                 // Loop através das mensagens
@@ -122,9 +123,17 @@ $mensagens = $usuario->buscarMensagens();
                 <?php
                 }
                 ?>
+
             </div>
+            <h4> Respondidas: <?php echo $mensagensRespondidas; ?> Não Respondidas: <?php echo $mensagensNaoRespondidas; ?></h4>
             <a href="excluir_mensagens_respondidas.php" class="btn btn-3d">Excluir Mensagens Respondidas</a>
+
         </div>
+
+
+
+
+
     </main>
 
     <footer class="text-center">

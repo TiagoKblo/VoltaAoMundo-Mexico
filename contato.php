@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          // Mensagem enviada com sucesso
          echo '<p class="success-message">Mensagem enviada com sucesso. Entraremos em contato em breve.</p>';
          // Direcionar para a página anterior
-         echo '<a href="index.html">Voltar</a>';
+         echo '<a href="contato.html">Voltar</a>';
 
      } catch (PDOException $e) {
          // Erro no envio da mensagem
