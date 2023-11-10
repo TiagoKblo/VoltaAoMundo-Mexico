@@ -100,15 +100,10 @@ include 'contador_mensagens.php';
                                 <textarea name="resposta" rows="3" class="form-control" placeholder="Sua resposta" <?= $readonly ?>>
 <?php echo $mensagem['resposta']; ?>
 </textarea>
-
-
-
-
-
                             </div>
 
 
-                            <button type="submit" class="btn btn-primary btn-block">Responder</button>
+                                <button type="submit" class="btn btn-primary btn-block">Responder</button>
                         </form>
 
                         <!-- Botão para marcar como respondida -->
